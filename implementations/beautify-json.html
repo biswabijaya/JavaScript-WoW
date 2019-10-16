@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+     		<meta charset="utf-8">
+  	   	<title>Simplest Way To Beautify JSON Data</title>
+	</head>
+	<body>
+		Raw JSON
+	<br>
+		<div id="printraw">{"Students":[{"id":"19001","name":"SIDHARTH SARANGI"},{"id":"19002","name":"SARMISTHA SARANGI"}],"Teachers":[{"id":"3001","name":"Samarendra Senapaty"},{"id":"3002","name":"Joy Roy"},{"id":"3003","name":"Soumya Ranjan Mohanty"}],"Staffs":[{"id":"1001","name":"Ashok Sahoo"},{"id":"1002","name":"Namashya Mishra"}]}</div>
+	<hr>
+	Beautified JSON
+		<pre id="print"></pre>
+	</body>
+	<script type="text/javascript">
+		var data = {"Students":[{"id":"19001","name":"SIDHARTH SARANGI"},{"id":"19002","name":"SARMISTHA SARANGI"}],"Teachers":[{"id":"3001","name":"Samarendra Senapaty"},{"id":"3002","name":"Joy Roy"},{"id":"3003","name":"Soumya Ranjan Mohanty"}],"Staffs":[{"id":"1001","name":"Ashok Sahoo"},{"id":"1002","name":"Namashya Mishra"}]};
+		var divId = 'print' ;
+
+		// call beautifyJSON
+		beautifyJSON(data,divId);
+
+		// define beautifyJSON
+		function beautifyJSON(data,outputDivID) {
+			document.getElementById(outputDivID).innerHTML = JSON.stringify(data, undefined, 2);
+		}
+
+	</script>
+ </html>
